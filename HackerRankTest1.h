@@ -2,6 +2,12 @@
 #include <vector>
 using namespace std;
 
+/*
+given a integer array, all the elements are in same distance except that one of the elements if missing, find the missing elements
+ex. [1 2 4] -> 3
+[1 11 31 41 51] -> 21
+*/
+
 //very sad, I can't finish 1st question within 45 mins
 void test()
 {
@@ -12,7 +18,6 @@ void test()
 
 	int i = 0;
 	bool finish = false;
-	//int diff, diff1, diff2, n0, n1, n2, in, n;
 	int diff = 0, diff1 = 0, diff2 = 0, n0 = 0, n1 = 0, n2 = 0, in = 0, n = 0;
 	vector<int> vec;
 	while (i < num)
@@ -34,7 +39,7 @@ void test()
 			cout << n0 + diff2;
 			return;
 		}
-		else if (diff2 = 2 * diff1)
+		else if (diff2 == 2 * diff1)
 		{
 			cout << n1 + diff1;
 			return;
