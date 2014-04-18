@@ -34,7 +34,7 @@ int getNumberOfPrimes()
 	//vec.push_back(3);
 	for (int i = 3; i <= input; i = i + 2)
 	{
-		int sroot = (int)floor(sqrt(input));
+		int sroot = (int)floor(sqrt(i));
 		
 		if (primes.size() == 0)
 		{
@@ -47,11 +47,12 @@ int getNumberOfPrimes()
 		while (prime <= sroot)
 		{
 			if (i%prime == 0)
-				continue;
+				break;
 
 			prime = primes[++index];
 		}
-		primes.push_back(i);
+		if (prime > sroot)
+			primes.push_back(i);
 	}
 
 	cout << "# of primes less than " << input << " is: " << primes.size() + 1;
